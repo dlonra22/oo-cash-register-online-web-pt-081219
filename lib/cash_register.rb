@@ -2,7 +2,7 @@ require 'pry'
 class CashRegister
   INITIAL = 0.0
   @items = []
-  attr_accessor :total, :discount, :lastadded
+
   def initialize(discount = 0.0)
     @total = INITIAL
     @discount = discount
@@ -27,4 +27,9 @@ class CashRegister
     @items
   end
   
-end
+
+  def add_item(title, price, qntty = 1.0)
+    @lastadded = price*qntty
+    @total = @total + @lastadded
+  end
+ 
