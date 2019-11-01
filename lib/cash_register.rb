@@ -28,8 +28,4 @@ class CashRegister
   end
   
 
-  def add_item(title, price, qntty = 1.0)
-    @lastadded = price*qntty
-    @total = @total + @lastadded
-  end
- 
+
